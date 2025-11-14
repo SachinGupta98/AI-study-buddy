@@ -1,5 +1,4 @@
 
-
 import { User, StudyPlan, TutorChatSession, ChatMessage, Curriculum, QuizRecord, Task } from '../types';
 
 // In a real app, this would be an API call to a backend.

@@ -1,5 +1,4 @@
 
-
 import { GoogleGenAI, Type, GenerateContentResponse, Chat, Modality } from "@google/genai";
 import { Curriculum, StudyPlan, Task, ChatMessage, WeeklyPlan, Quiz } from '../types';
 
@@ -639,7 +638,7 @@ export const generateSpeechFromText = async (text: string): Promise<string> => {
     try {
         const response = await model.generateContent({
             model: "gemini-2.5-flash-preview-tts",
-            contents: [{ parts: [{ text: text }] }],
+            contents: [{ parts: [{ text: `Say it clearly: ${text}` }] }],
             config: {
                 responseModalities: [Modality.AUDIO],
                 speechConfig: {
